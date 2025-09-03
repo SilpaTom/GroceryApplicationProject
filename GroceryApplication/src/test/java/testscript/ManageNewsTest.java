@@ -19,12 +19,16 @@ public class ManageNewsTest extends TestNGBase{
 		password.sendKeys(passwordValue);
 		WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
 		loginBtn.click();
+		WebElement managenewstile=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']"));
+		managenewstile.click();
 		WebElement newbtn=driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
 		newbtn.click();
 		WebElement editnewsinput=driver.findElement(By.xpath("//textarea[@id='news']"));
 		editnewsinput.sendKeys("sample news");
 		WebElement editnewssavebtn=driver.findElement(By.xpath("//button[@name='create']"));
 		editnewssavebtn.click();
+		WebElement alertclosebutton=driver.findElement(By.xpath("//button[@class='close']"));
+		alertclosebutton.click();
 	}
 	
 	@Test
@@ -39,7 +43,7 @@ public class ManageNewsTest extends TestNGBase{
 		loginBtn.click();
 		WebElement managenewstitle=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']"));
 		managenewstitle.click();
-		WebElement homebtn=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/home']"));
+		WebElement homebtn=driver.findElement(By.xpath("//a[text()='Home']"));
 		homebtn.click();
 	}
 	@Test

@@ -3,56 +3,50 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import Pages.LoginPage;
 import base.TestNGBase;
 import utilities.ExcelUtility;
 
 public class LoginTest extends TestNGBase{
 	
-	@Test
+	@Test(priority = 1,description = "login with valid credentials")
 	public void verifyLoginWithValidCredentials() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
-		WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
-		username.sendKeys(usernameValue);
-		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		loginBtn.click();
+	    LoginPage loginpage=new LoginPage(driver);
+	    loginpage.enterUserName(usernameValue);
+		loginpage.enterPassword(passwordValue);
+		loginpage.clickOnSignin();
 	}
 	
-	@Test
+	@Test(priority =2 )
 	public void verifyLoginWithValidUsernameInvalidpassword() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(2, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(2, 1, "LoginPage");
-		WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
-		username.sendKeys(usernameValue);
-		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		loginBtn.click();
+		LoginPage loginpage=new LoginPage(driver);
+	    loginpage.enterUserName(usernameValue);
+		loginpage.enterPassword(passwordValue);
+		loginpage.clickOnSignin();
 	}
 	
-	@Test
+	@Test(priority = 3)
 	
 	public void verifyLoginWithInvalidUsernameValidpassword() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(3, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(3, 1, "LoginPage");
-		WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
-		username.sendKeys(usernameValue);
-		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		loginBtn.click();
+		LoginPage loginpage=new LoginPage(driver);
+	    loginpage.enterUserName(usernameValue);
+		loginpage.enterPassword(passwordValue);
+		loginpage.clickOnSignin();
 	}
-	@Test
+	@Test(priority = 4)
 	public void verifyLoginWithInvalidUsernameInvalidpassword() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(4, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(4, 1, "LoginPage");
-		WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
-		username.sendKeys(usernameValue);
-		WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		loginBtn.click();
+		LoginPage loginpage=new LoginPage(driver);
+	    loginpage.enterUserName(usernameValue);
+		loginpage.enterPassword(passwordValue);
+		loginpage.clickOnSignin();
 	}
 }
