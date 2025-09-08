@@ -8,7 +8,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
 	
-	@Test
+	@Test(description = "verify Add News")
 	
 	public void verifyAddNews() throws IOException {
 		 String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -25,7 +25,7 @@ public class ManageNewsTest extends TestNGBase{
 		 
 	}
 	
-	@Test
+	@Test(description = "verify Home Button")
 	public void verifyHome() throws IOException {
 		 String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		 String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");		
@@ -37,7 +37,7 @@ public class ManageNewsTest extends TestNGBase{
 		 mangenewspage.clickManageNewsTile();
 		 mangenewspage.clickhomebtn();	
 	}
-	@Test
+	@Test(description = "Verify Search button in Search()")
 	public void verifySearchAndSearch() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");	
@@ -52,7 +52,7 @@ public class ManageNewsTest extends TestNGBase{
 		mangenewspage.clickSearchbtnInSeach();
 		}
 	
-	@Test
+	@Test(description= "Verify Reset button in Search")
 	
 	public void verifySearchAndReset() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");

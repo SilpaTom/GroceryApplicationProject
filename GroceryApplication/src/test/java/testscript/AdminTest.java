@@ -2,7 +2,9 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.IAssert;
 
 import Pages.AdminPage;
 import Pages.LoginPage;
@@ -11,14 +13,14 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminTest extends TestNGBase{
-	@Test
+	@Test(description="AddUser functionality")
 	public void verifyAddUser() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
-		 LoginPage loginpage=new LoginPage(driver);
-		 loginpage.enterUserName(usernameValue);
-		 loginpage.enterPassword(passwordValue);
-		 loginpage.clickOnSignin();
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUserName(usernameValue);
+		loginpage.enterPassword(passwordValue);
+		loginpage.clickOnSignin();
 		AdminPage adminpage=new AdminPage(driver);
 		adminpage.clickAdminMoreifo();
 		FakerUtility fakerUtility = new FakerUtility();
@@ -30,7 +32,8 @@ public class AdminTest extends TestNGBase{
 		adminpage.enterPassword(randompassword);
 		adminpage.selectUserTypedropdwon(userType);
 		adminpage.clickSaveButtob();
-		
+		boolean isDisplayed=adminpage.isAlertDisplayed();
+		Assert.assertTrue(isDisplayed,"user is not added susccessfully");
 	}
 
 }

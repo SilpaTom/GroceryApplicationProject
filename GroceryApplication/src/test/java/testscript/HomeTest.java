@@ -7,7 +7,7 @@ import base.TestNGBase;
 import utilities.ExcelUtility;
 public class HomeTest extends TestNGBase {
 	
-	@Test
+	@Test(description ="verify Logout functionality")
 	public void verifyLogout() throws IOException {
 		
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
