@@ -1,22 +1,22 @@
 package testscript;
-
 import java.io.IOException;
+import java.time.Duration;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.IAssert;
 
 import Pages.AdminPage;
 import Pages.LoginPage;
 import base.TestNGBase;
+import constant.Constants;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminTest extends TestNGBase{
 	@Test(description="AddUser functionality")
 	public void verifyAddUser() throws IOException {
-		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
-		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
+		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
+		String passwordValue=ExcelUtility.getStringData(1, 1,Constants.LOGINSHEET);
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
@@ -26,12 +26,13 @@ public class AdminTest extends TestNGBase{
 		FakerUtility fakerUtility = new FakerUtility();
 		String randomname=fakerUtility.createRandomUserName();
 		String randompassword=fakerUtility.createRandomPassword();
-		String userType=ExcelUtility.getStringData(1, 2,"HomePage");
+		String userType=ExcelUtility.getStringData(1, 2,Constants.HOMESHEET);
 		adminpage.clickNewButton();
 		adminpage.enterUsername(randomname);
 		adminpage.enterPassword(randompassword);
 		adminpage.selectUserTypedropdwon(userType);
 		adminpage.clickSaveButtob();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		boolean isDisplayed=adminpage.isAlertDisplayed();
 		Assert.assertTrue(isDisplayed,"user is not added susccessfully");
 	}

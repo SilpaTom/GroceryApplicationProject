@@ -1,57 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T10:00:45 IST" name="Default suite" finished-at="2025-09-04T10:01:00 IST" duration-ms="15076">
+  <suite started-at="2025-09-09T11:59:15 IST" name="Default suite" finished-at="2025-09-09T11:59:43 IST" duration-ms="28167">
     <groups>
     </groups>
-    <test started-at="2025-09-04T10:00:45 IST" name="Default test" finished-at="2025-09-04T10:01:00 IST" duration-ms="15076">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:45 IST" name="browserInitializer" finished-at="2025-09-04T10:00:48 IST" duration-ms="3380" status="PASS">
+    <test started-at="2025-09-09T11:59:15 IST" name="Default test" finished-at="2025-09-09T11:59:43 IST" duration-ms="28167">
+      <class name="testscript.ManageNewsTest">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:15 IST" name="browserInitializer" finished-at="2025-09-09T11:59:17 IST" duration-ms="1991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithValidCredentials()[pri:1, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:48 IST" name="verifyLoginWithValidCredentials" description="login with valid credentials" finished-at="2025-09-04T10:00:51 IST" duration-ms="2525" status="PASS">
+        <test-method signature="verifyAddNews()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:17 IST" name="verifyAddNews" description="verify Add News" finished-at="2025-09-09T11:59:19 IST" duration-ms="2048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddNews -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:19 IST" name="driverQuit" finished-at="2025-09-09T11:59:19 IST" duration-ms="194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddNews status=SUCCESS method=ManageNewsTest.verifyAddNews()[pri:0, instance:testscript.ManageNewsTest@6b2ea799] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:19 IST" name="quitAndClose" finished-at="2025-09-09T11:59:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:19 IST" name="browserInitializer" finished-at="2025-09-09T11:59:20 IST" duration-ms="1334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyHome()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:20 IST" name="verifyHome" description="verify Home Button" finished-at="2025-09-09T11:59:21 IST" duration-ms="1182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHome -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:21 IST" name="driverQuit" finished-at="2025-09-09T11:59:22 IST" duration-ms="188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHome status=SUCCESS method=ManageNewsTest.verifyHome()[pri:0, instance:testscript.ManageNewsTest@6b2ea799] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:22 IST" name="quitAndClose" finished-at="2025-09-09T11:59:22 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:22 IST" name="browserInitializer" finished-at="2025-09-09T11:59:23 IST" duration-ms="1310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifySearchAndReset()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:23 IST" name="verifySearchAndReset" description="Verify Reset button in Search" finished-at="2025-09-09T11:59:24 IST" duration-ms="1407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchAndReset -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:24 IST" name="driverQuit" finished-at="2025-09-09T11:59:24 IST" duration-ms="168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySearchAndReset status=SUCCESS method=ManageNewsTest.verifySearchAndReset()[pri:0, instance:testscript.ManageNewsTest@6b2ea799] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:24 IST" name="quitAndClose" finished-at="2025-09-09T11:59:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:24 IST" name="browserInitializer" finished-at="2025-09-09T11:59:26 IST" duration-ms="1371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifySearchAndSearch()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:26 IST" name="verifySearchAndSearch" description="Verify Search button in Search()" finished-at="2025-09-09T11:59:27 IST" duration-ms="1266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchAndSearch -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:27 IST" name="driverQuit" finished-at="2025-09-09T11:59:27 IST" duration-ms="182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySearchAndSearch status=SUCCESS method=ManageNewsTest.verifySearchAndSearch()[pri:0, instance:testscript.ManageNewsTest@6b2ea799] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.ManageNewsTest@6b2ea799]" started-at="2025-09-09T11:59:27 IST" name="quitAndClose" finished-at="2025-09-09T11:59:27 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+      </class> <!-- testscript.ManageNewsTest -->
+      <class name="testscript.HomeTest">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.HomeTest@489115ef]" started-at="2025-09-09T11:59:31 IST" name="browserInitializer" finished-at="2025-09-09T11:59:32 IST" duration-ms="1243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyLogout()[pri:0, instance:testscript.HomeTest@489115ef]" started-at="2025-09-09T11:59:32 IST" name="verifyLogout" description="verify Logout functionality" finished-at="2025-09-09T11:59:33 IST" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.HomeTest@489115ef]" started-at="2025-09-09T11:59:33 IST" name="driverQuit" finished-at="2025-09-09T11:59:33 IST" duration-ms="189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogout status=SUCCESS method=HomeTest.verifyLogout()[pri:0, instance:testscript.HomeTest@489115ef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.HomeTest@489115ef]" started-at="2025-09-09T11:59:33 IST" name="quitAndClose" finished-at="2025-09-09T11:59:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+      </class> <!-- testscript.HomeTest -->
+      <class name="testscript.AdminTest">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.AdminTest@15de0b3c]" started-at="2025-09-09T11:59:27 IST" name="browserInitializer" finished-at="2025-09-09T11:59:29 IST" duration-ms="1350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyAddUser()[pri:0, instance:testscript.AdminTest@15de0b3c]" started-at="2025-09-09T11:59:29 IST" name="verifyAddUser" description="AddUser functionality" finished-at="2025-09-09T11:59:31 IST" duration-ms="2248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddUser -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@15de0b3c]" started-at="2025-09-09T11:59:31 IST" name="driverQuit" finished-at="2025-09-09T11:59:31 IST" duration-ms="183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddUser status=SUCCESS method=AdminTest.verifyAddUser()[pri:0, instance:testscript.AdminTest@15de0b3c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.AdminTest@15de0b3c]" started-at="2025-09-09T11:59:31 IST" name="quitAndClose" finished-at="2025-09-09T11:59:31 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAndClose -->
+      </class> <!-- testscript.AdminTest -->
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:33 IST" name="browserInitializer" finished-at="2025-09-09T11:59:35 IST" duration-ms="1443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyLoginWithValidCredentials()[pri:1, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:35 IST" name="verifyLoginWithValidCredentials" description="login with valid credentials" finished-at="2025-09-09T11:59:36 IST" duration-ms="709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithValidCredentials -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:51 IST" name="quitAndClose" finished-at="2025-09-04T10:00:51 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:36 IST" name="driverQuit" finished-at="2025-09-09T11:59:36 IST" duration-ms="169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyLoginWithValidCredentials()[pri:1, instance:testscript.LoginTest@3857f613] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:36 IST" name="quitAndClose" finished-at="2025-09-09T11:59:36 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAndClose -->
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:51 IST" name="browserInitializer" finished-at="2025-09-04T10:00:53 IST" duration-ms="2219" status="PASS">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:36 IST" name="browserInitializer" finished-at="2025-09-09T11:59:38 IST" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithValidUsernameInvalidpassword()[pri:2, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:53 IST" name="verifyLoginWithValidUsernameInvalidpassword" finished-at="2025-09-04T10:00:54 IST" duration-ms="1026" status="PASS">
+        <test-method signature="verifyLoginWithValidUsernameInvalidpassword()[pri:2, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:38 IST" name="verifyLoginWithValidUsernameInvalidpassword" description="Login With Valid Username Invalid Password" finished-at="2025-09-09T11:59:38 IST" duration-ms="460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithValidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:54 IST" name="quitAndClose" finished-at="2025-09-04T10:00:54 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:38 IST" name="driverQuit" finished-at="2025-09-09T11:59:38 IST" duration-ms="187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithValidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithValidUsernameInvalidpassword()[pri:2, instance:testscript.LoginTest@3857f613] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:38 IST" name="quitAndClose" finished-at="2025-09-09T11:59:38 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAndClose -->
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:54 IST" name="browserInitializer" finished-at="2025-09-04T10:00:57 IST" duration-ms="2354" status="PASS">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:38 IST" name="browserInitializer" finished-at="2025-09-09T11:59:40 IST" duration-ms="1404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithInvalidUsernameValidpassword()[pri:3, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:57 IST" name="verifyLoginWithInvalidUsernameValidpassword" finished-at="2025-09-04T10:00:57 IST" duration-ms="729" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsernameValidpassword()[pri:3, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:40 IST" name="verifyLoginWithInvalidUsernameValidpassword" description="Login With Invalid Username Valid Password" finished-at="2025-09-09T11:59:40 IST" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidUsernameValidpassword -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:57 IST" name="quitAndClose" finished-at="2025-09-04T10:00:57 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:40 IST" name="driverQuit" finished-at="2025-09-09T11:59:40 IST" duration-ms="209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameValidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameValidpassword()[pri:3, instance:testscript.LoginTest@3857f613] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:40 IST" name="quitAndClose" finished-at="2025-09-09T11:59:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAndClose -->
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:57 IST" name="browserInitializer" finished-at="2025-09-04T10:00:59 IST" duration-ms="2066" status="PASS">
+        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:40 IST" name="browserInitializer" finished-at="2025-09-09T11:59:42 IST" duration-ms="1319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword()[pri:4, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:00:59 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" finished-at="2025-09-04T10:01:00 IST" duration-ms="606" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword()[pri:4, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:42 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" finished-at="2025-09-09T11:59:43 IST" duration-ms="796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@4c583ecf]" started-at="2025-09-04T10:01:00 IST" name="quitAndClose" finished-at="2025-09-04T10:01:00 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:43 IST" name="driverQuit" finished-at="2025-09-09T11:59:43 IST" duration-ms="182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword()[pri:4, instance:testscript.LoginTest@3857f613] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@3857f613]" started-at="2025-09-09T11:59:43 IST" name="quitAndClose" finished-at="2025-09-09T11:59:43 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitAndClose -->

@@ -33,4 +33,11 @@ public class LoginPage {
 	//WebElement loginBtn=driver.findElement(By.xpath("//button[text()='Sign In']"));
 	loginBtn.click();
 	}
+	
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")WebElement loginAlert;
+	public boolean isLoginAlertDisplayed() {
+		
+		return loginAlert.isDisplayed();
+	}
+	
 }

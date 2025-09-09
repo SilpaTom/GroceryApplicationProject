@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
 	
@@ -11,6 +12,8 @@ public class ManageNewsPage {
 	   public ManageNewsPage(WebDriver driver)
 	   {
 		  this.driver=driver; 
+		  PageFactory.initElements(driver, this);
+	
 	   }
 	   
 	   @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']")WebElement managenewstile;
@@ -24,9 +27,9 @@ public class ManageNewsPage {
 		//  WebElement newbtn=driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
 		  newbtn.click();
 	  }
-	  @FindBy(xpath = "//a[@class='//textarea[@id='news']")WebElement editnewsinput;
+	  @FindBy(xpath = "//textarea[@placeholder='Enter the news']")WebElement editnewsinput;
 	  public void enterEditNewsInput() {
-		//  WebElement editnewsinput=driver.findElement(By.xpath("//textarea[@id='news']"));
+	
 		  editnewsinput.sendKeys("sample news");
 	  }
 	  
@@ -65,4 +68,25 @@ public class ManageNewsPage {
 		WebElement resetbtn=driver.findElement(By.xpath("//a[text()='Reset']"));
 		resetbtn.click();
 	  }
-}
+	  //assertion web elements methods
+	  
+	  @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement addNewsAlert;
+	  
+	  public boolean isaddNewsAlertDisplayed() {
+			return addNewsAlert.isDisplayed();
+		  }
+	  
+	  @FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement fistcelloftable;
+	  
+	  public String isSearchedNewsListedIntable() {
+		return fistcelloftable.getText();
+		  }
+   
+	  @FindBy(xpath = "//form[@role='form' ]") WebElement searchandmangenewscard;
+	  	  public boolean isSearchAndMangeNewsCarddisplayed() {
+		return searchandmangenewscard.isDisplayed();
+		  }
+	  
+
+	}
+
