@@ -1,10 +1,7 @@
 package testscript;
 import java.io.IOException;
-import java.time.Duration;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import Pages.AdminPage;
 import Pages.LoginPage;
 import base.TestNGBase;
@@ -32,7 +29,6 @@ public class AdminTest extends TestNGBase{
 		adminpage.enterPassword(randompassword);
 		adminpage.selectUserTypedropdwon(userType);
 		adminpage.clickSaveButtob();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		boolean isDisplayed=adminpage.isAlertDisplayed();
 		Assert.assertTrue(isDisplayed,"user is not added susccessfully");
 	}

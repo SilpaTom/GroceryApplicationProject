@@ -1,6 +1,5 @@
 package testscript;
 import java.io.IOException;
-import java.time.Duration;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -61,7 +60,6 @@ public class ManageNewsTest extends TestNGBase{
 		mangenewspage.clickSearchButton();
 		mangenewspage.enterNewsTitlteInputBox();
 		mangenewspage.clickSearchbtnInSeach();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		String actualnewssearched=mangenewspage.isSearchedNewsListedIntable();
 		String expectednews="sample news";
 		Assert.assertEquals(actualnewssearched,expectednews," user cannot see the searched news");

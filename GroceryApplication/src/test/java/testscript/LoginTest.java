@@ -1,10 +1,10 @@
 package testscript;
 
 import java.io.IOException;
-import java.time.Duration;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import Pages.LoginPage;
 import base.TestNGBase;
 import constant.Constants;
@@ -20,7 +20,6 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		String actual = driver.getCurrentUrl();
 		System.out.println(actual);
 		String expected = "https://groceryapp.uniqassosiates.com/admin";
@@ -36,7 +35,6 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		boolean isloginalertdisplayed = loginpage.isLoginAlertDisplayed();
 		Assert.assertTrue(isloginalertdisplayed, "Valid Username Invalid Password functionality failed");
  
@@ -51,7 +49,6 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		boolean isloginalertdisplayed = loginpage.isLoginAlertDisplayed();
 		Assert.assertTrue(isloginalertdisplayed,"Login With Invalid Username Valid Password functionality failed");
 
@@ -65,7 +62,6 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Waits for up to 10 seconds
 		boolean isloginalertdisplayed = loginpage.isLoginAlertDisplayed();
 		Assert.assertTrue(isloginalertdisplayed,"Login With Invalid Username Invalid Password functionality failed");
 
