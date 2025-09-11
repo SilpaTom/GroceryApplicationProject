@@ -1,6 +1,7 @@
 package base;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,20 +11,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import utilities.ScreenshotUtility;
 
 public class TestNGBase {
 		
 	public WebDriver driver;
-	
-	@BeforeMethod
-	
-	public void browserInitializer()
+		@BeforeMethod
+		public void browserInitializer()
 	{ 
 		//driver = new ChromeDriver(); 
 		//driver=new FirefoxDriver();
-		
 		//ChromeOptions` allows you to customize how Chrome starts — such as setting preferences, enabling headless mode, disabling extensions, etc.
 		ChromeOptions options = new ChromeOptions();
 		//Create a map that has the key as password leak detection , and value to be false so that leak detect is turned off while launching browser.
@@ -33,13 +30,10 @@ public class TestNGBase {
 		options.setExperimentalOption("prefs", prefs);
 		//Launch the driver with customized preference with "options"
 		driver = new ChromeDriver(options);
-		
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login"); 
 	  	driver.manage().window().maximize(); 
-	  	
-	  	
-
-	}
+	  	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	  	}
 	
 	@AfterMethod	
 	public void quitAndClose() {
@@ -55,6 +49,7 @@ public class TestNGBase {
 	@AfterMethod(alwaysRun = true)
 	public void driverQuit(ITestResult iTestResult) throws IOException
 	{
+		
 		if(iTestResult.getStatus()==ITestResult.FAILURE)
 		{
 			ScreenshotUtility screenShot=new ScreenshotUtility();

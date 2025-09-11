@@ -17,7 +17,8 @@ public class LoginPage {
 	}
 	
 	@FindBy(xpath = "//input[@name='username']")WebElement username;
-	public void enterUserName(String usernameValue) {
+	public void enterUserName(String usernameValue)
+	{
 	//WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
 	username.sendKeys(usernameValue);
 	}
