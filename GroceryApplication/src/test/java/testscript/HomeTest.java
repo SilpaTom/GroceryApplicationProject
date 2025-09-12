@@ -1,13 +1,12 @@
 package testscript;
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import Pages.HomePage;
 import Pages.LoginPage;
 import base.TestNGBase;
 import constant.Constants;
+import constant.Messages;
 import utilities.ExcelUtility;
 public class HomeTest extends TestNGBase {
 	
@@ -25,7 +24,7 @@ public class HomeTest extends TestNGBase {
 		homepage.clickLogoutIcon();
 		String actual=driver.getCurrentUrl();
 		String expected="https://groceryapp.uniqassosiates.com/admin/login";
-		Assert.assertEquals(actual,expected, "logout is not successful");
+		Assert.assertEquals(actual,expected,Messages.LOGOUTERROR);
 			
 	}
 

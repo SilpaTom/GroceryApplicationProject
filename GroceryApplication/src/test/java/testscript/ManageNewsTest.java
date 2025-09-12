@@ -8,6 +8,7 @@ import Pages.LoginPage;
 import Pages.ManageNewsPage;
 import base.TestNGBase;
 import constant.Constants;
+import constant.Messages;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
@@ -27,7 +28,7 @@ public class ManageNewsTest extends TestNGBase{
 		 mangenewspage.enterEditNewsInput();
 		 mangenewspage.enterEditNewsSavebtn();
 		boolean isadduseralertdisplayed = mangenewspage.isaddNewsAlertDisplayed();
-		Assert.assertTrue(isadduseralertdisplayed,"user is not able to add news");
+		Assert.assertTrue(isadduseralertdisplayed,Messages.ADDUSERALERTDISPLAYEDERROR);
 		 
 	}
 	
@@ -44,7 +45,7 @@ public class ManageNewsTest extends TestNGBase{
 		 mangenewspage.clickhomebtn();	
 		 String actual=driver.getCurrentUrl();
 		 String expected="https://groceryapp.uniqassosiates.com/admin/home";
-		 Assert.assertEquals(actual, expected," user is not able to navigate to home page");
+		 Assert.assertEquals(actual, expected,Messages.NAVIGATETOHOMEPAGEERROR);
 	}
 	
 	@Test(description = "Verify Search button in Search()")
@@ -62,7 +63,7 @@ public class ManageNewsTest extends TestNGBase{
 		mangenewspage.clickSearchbtnInSeach();
 		String actualnewssearched=mangenewspage.isSearchedNewsListedIntable();
 		String expectednews="sample news";
-		Assert.assertEquals(actualnewssearched,expectednews," user cannot see the searched news");
+		Assert.assertEquals(actualnewssearched,expectednews,Messages.SEARCHEDNEWSNOTFOUNDERROR);
 		
 		}
 	
@@ -81,7 +82,7 @@ public class ManageNewsTest extends TestNGBase{
 		mangenewspage.enterNewsTitlteInputBox();
 		mangenewspage.clickResetInSearch();
 		boolean issearchandmangenewscarddispalyed=mangenewspage.isSearchAndMangeNewsCarddisplayed();
-		Assert.assertFalse(issearchandmangenewscarddispalyed, "user is not able to reset");
+		Assert.assertFalse(issearchandmangenewscarddispalyed,Messages.RESETERROR);
 	}
 
 }

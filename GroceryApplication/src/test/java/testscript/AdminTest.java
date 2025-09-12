@@ -6,6 +6,7 @@ import Pages.AdminPage;
 import Pages.LoginPage;
 import base.TestNGBase;
 import constant.Constants;
+import constant.Messages;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
@@ -30,7 +31,8 @@ public class AdminTest extends TestNGBase{
 		adminpage.selectUserTypedropdwon(userType);
 		adminpage.clickSaveButtob();
 		boolean isDisplayed=adminpage.isAlertDisplayed();
-		Assert.assertTrue(isDisplayed,"user is not added susccessfully");
+		Assert.assertTrue(isDisplayed,Messages.USERNOTADDEDERROR);
+		
 	}
 
 }

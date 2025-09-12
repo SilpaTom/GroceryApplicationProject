@@ -5,85 +5,88 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageNewsPage {
 	
 		public WebDriver driver;
+		PageUtility pageutility=new PageUtility();
 		
 	   public ManageNewsPage(WebDriver driver)
 	   {
 		  this.driver=driver; 
-		  PageFactory.initElements(driver, this);
-	
+		  PageFactory.initElements(driver, this);	
 	   }
 	   
 	   @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']")WebElement managenewstile;
 	   public void clickManageNewsTile() {
-	//	WebElement managenewstile=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']"));
-		managenewstile.click();
+			pageutility.clickElement(managenewstile);
 	   }
-	   @FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")WebElement newbtn;
+	   
+	  @FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")WebElement newbtn;
 	  public void clickNewButton()
 	  {
-		//  WebElement newbtn=driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
-		  newbtn.click();
+		 pageutility.clickElement(newbtn);
 	  }
 	  @FindBy(xpath = "//textarea[@placeholder='Enter the news']")WebElement editnewsinput;
-	  public void enterEditNewsInput() {
-	
-		  editnewsinput.sendKeys("sample news");
+	  public void enterEditNewsInput()
+	  {	
+		
+		 pageutility.sendDataToElement(editnewsinput,"sample news");
 	  }
 	  
 	  @FindBy(xpath = "//button[@name='create']")WebElement editnewssavebtn;
-	  public void enterEditNewsSavebtn() {
-		//WebElement editnewssavebtn=driver.findElement(By.xpath("//button[@name='create']"));
-		editnewssavebtn.click();
+	  public void enterEditNewsSavebtn()
+	  {
+		pageutility.clickElement(editnewssavebtn);
 	  } 
 	  
 	  @FindBy(xpath = "//a[text()='Home']")WebElement homebtn;
-	  public void clickhomebtn() {
-	 // WebElement homebtn=driver.findElement(By.xpath("//a[text()='Home']"));
-	  homebtn.click();
+	  public void clickhomebtn()
+	  {
+		  pageutility.clickElement(homebtn);
 	  }
 	  
 	  @FindBy(xpath = "//a[@href='javascript:void(0)']")WebElement searchbtn;
-	  public void clickSearchButton() {
-	   // WebElement searchbtn=driver.findElement(By.xpath("//a[@href='javascript:void(0)']"));
-		searchbtn.click();
+	  public void clickSearchButton() 
+	  {
+		  pageutility.clickElement(searchbtn);
 	  }
 	  
 	  @FindBy(xpath = "//input[@placeholder='Title']")WebElement newstitlteinputbox;
-	  public void enterNewsTitlteInputBox() {
-		//WebElement newstitlteinputbox=driver.findElement(By.xpath("//input[@placeholder='Title']"));
-		newstitlteinputbox.sendKeys("Sample news");
+	  public void enterNewsTitlteInputBox()
+	  {
+		pageutility.sendDataToElement(newstitlteinputbox,"Sample news");
 	  }
 	  
 	  @FindBy(xpath = "//button[text()='Search']")WebElement searchbtnInSearch;
-	  public void clickSearchbtnInSeach() {
-		  WebElement searchbtnInSearch=driver.findElement(By.xpath("//button[text()='Search']"));
-		  searchbtnInSearch.click();
+	  public void clickSearchbtnInSeach() 
+	  {
+				 
+		  pageutility.clickElement(searchbtnInSearch);
 	  }
 	  
 	  @FindBy(xpath = "//a[text()='Reset']")WebElement resetbtn;
 	  public void clickResetInSearch() {
-		WebElement resetbtn=driver.findElement(By.xpath("//a[text()='Reset']"));
-		resetbtn.click();
+		
+		pageutility.clickElement(resetbtn);
 	  }
-	  //assertion web elements methods
+	  //assertion web elements and methods
 	  
 	  @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement addNewsAlert;
 	  
-	  public boolean isaddNewsAlertDisplayed() {
+	  public boolean isaddNewsAlertDisplayed() 
+	     {
 			return addNewsAlert.isDisplayed();
 		  }
 	  
 	  @FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement fistcelloftable;
-	  
 	  public String isSearchedNewsListedIntable() {
-		return fistcelloftable.getText();
+	  return fistcelloftable.getText();
 		  }
    
 	  @FindBy(xpath = "//form[@role='form' ]") WebElement searchandmangenewscard;
-	  	  public boolean isSearchAndMangeNewsCarddisplayed() {
+	  	public boolean isSearchAndMangeNewsCarddisplayed() {
 		return searchandmangenewscard.isDisplayed();
 		  }
 	  

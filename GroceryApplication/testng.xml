@@ -10,11 +10,22 @@
  
   <test thread-count="5" name="Test">
     <classes>
- <!-- short cut to comment cntl+shift+/-->
-     <!--<class name="testscript.HomeTest"/>
-      <class name="testscript.ManageNewsTest"/>
-      <class name="testscript.AdminTest"/>-->
-      <class name="testscript.LoginTest"/>
+<!--  short cut to comment cntl+shift+/ -->
+
+    <!-- <class name="testscript.HomeTest"/>
+      <class name="testscript.ManageNewsTest"/>-->
+    <!--  <class name="testscript.AdminTest"/>-->
+   <!-- <class name="testscript.LoginTest"/>-->
+   
+   <!--this is to run a single method present in the logintest class-->
+   
+      <class name="testscript.LoginTest">
+      <methods> 
+      <include name="verifyLoginWithInvalidUsernameInvalidpassword"></include>
+<!--to exclude one test menthod to run in testNG , for eac-->      
+   <!--   <exclude name=""></exclude>-->
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

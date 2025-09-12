@@ -1,6 +1,7 @@
 package testscript;
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Pages.LoginPage;
 import base.TestNGBase;
@@ -21,7 +22,7 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
 		String actual = driver.getCurrentUrl();
-		System.out.println(actual);
+		System.out.println(actual); 
 		String expected = "https://groceryapp.uniqassosiates.com/admin";
 		Assert.assertEquals(actual, expected, Messages.VALIDCREDENTIALERROR);
 
@@ -51,20 +52,33 @@ public class LoginTest extends TestNGBase {
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
 		boolean isloginalertdisplayed = loginpage.isLoginAlertDisplayed();
-		Assert.assertTrue(isloginalertdisplayed,"Login With Invalid Username Valid Password functionality failed");
+		Assert.assertTrue(isloginalertdisplayed,Messages.INVALIDUSERNAMEVALIDPASSWORDERROR);
 
 	}
 
-	@Test(priority = 4, description = "Login With Invalid Username Invalid Password")
-	public void verifyLoginWithInvalidUsernameInvalidpassword() throws IOException {
-		String usernameValue = ExcelUtility.getStringData(4, 0, Constants.LOGINSHEET);
-		String passwordValue = ExcelUtility.getStringData(4, 1, Constants.LOGINSHEET);
+	@Test(priority = 4, description = "Login With Invalid Username Invalid Password",dataProvider = "loginProvider")
+	
+	public void verifyLoginWithInvalidUsernameInvalidpassword(String usernameValue,String passwordValue) throws IOException {
+// (String usernameValue,String passwordValue) two parameters to retrieve values from data provider	
+//		String usernameValue = ExcelUtility.getStringData(4, 0, Constants.LOGINSHEET);
+//		String passwordValue = ExcelUtility.getStringData(4, 1, Constants.LOGINSHEET);
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernameValue);
 		loginpage.enterPassword(passwordValue);
 		loginpage.clickOnSignin();
 		boolean isloginalertdisplayed = loginpage.isLoginAlertDisplayed();
-		Assert.assertTrue(isloginalertdisplayed,"Login With Invalid Username Invalid Password functionality failed");
+		Assert.assertTrue(isloginalertdisplayed,Messages.INVALIDUSERNAMEINVALIDPASSWORDERROR);
 
+	}
+	// annotation provided by testNg. more coverage 
+	@DataProvider(name="loginProvider")
+	public Object[][] getDataFromDataProvider() throws IOException
+	{
+		return new Object[][]
+		{  
+			new Object[] {"user","password"},
+			new Object[] {"username","pass"},
+			new Object[] {"user1","password1"}
+		};
 	}
 }

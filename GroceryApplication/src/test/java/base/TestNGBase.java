@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,20 +31,23 @@ public class TestNGBase {
 		driver = new ChromeDriver(options);
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login"); 
 	  	driver.manage().window().maximize(); 
+	  	
 	  	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	  	}
 	
-	@AfterMethod	
-	public void quitAndClose() {
-	//	driver.close();
-
-	}
-	
-	// we need run this this after each test case
-	// alwaysRun = true : if the testscript fails in the middle of the test case.
-    // to ensure the method following is executed before test case is terminted
-	//iTestResult= test case pass/fail
-	//ITestResult: in built interface provided by testng. which includes all the date of one testcase
+//	@AfterMethod	
+//	public void quitAndClose() {
+//	//	driver.close();
+//
+//	}
+//	
+//	// we need run this this after each test case
+//	// alwaysRun = true : if the testscript fails in the middle of the test case.
+//    // to ensure the method following is executed before test case is terminted
+//	//iTestResult= test case pass/fail
+//	//ITestResult: in built interface provided by testng. which includes all the date of one testcase
+//	
+//	
 	@AfterMethod(alwaysRun = true)
 	public void driverQuit(ITestResult iTestResult) throws IOException
 	{
