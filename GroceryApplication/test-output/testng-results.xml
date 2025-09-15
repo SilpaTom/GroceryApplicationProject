@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-12T09:37:46 IST" name="Suite" finished-at="2025-09-12T09:37:54 IST" duration-ms="8213">
+  <suite started-at="2025-09-15T13:38:11 IST" name="parallel" finished-at="2025-09-15T13:38:40 IST" duration-ms="29303">
     <groups>
     </groups>
-    <test started-at="2025-09-12T09:37:46 IST" name="Test" finished-at="2025-09-12T09:37:54 IST" duration-ms="8213">
+    <test started-at="2025-09-15T13:38:11 IST" name="Test" finished-at="2025-09-15T13:38:23 IST" duration-ms="12620">
       <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:46 IST" name="browserInitializer" finished-at="2025-09-12T09:37:49 IST" duration-ms="3377" status="PASS">
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:11 IST" name="browserInitializer" finished-at="2025-09-15T13:38:13 IST" duration-ms="2778" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:49 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-12T09:37:50 IST" duration-ms="492" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:13 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:14 IST" duration-ms="1120" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,26 +34,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:50 IST" name="driverQuit" finished-at="2025-09-12T09:37:50 IST" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:14 IST" name="driverQuit" finished-at="2025-09-15T13:38:15 IST" duration-ms="705" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:50 IST" name="quitAndClose" finished-at="2025-09-12T09:37:50 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitAndClose -->
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:50 IST" name="browserInitializer" finished-at="2025-09-12T09:37:51 IST" duration-ms="1438" status="PASS">
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:15 IST" name="browserInitializer" finished-at="2025-09-15T13:38:17 IST" duration-ms="1747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:51 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-12T09:37:52 IST" duration-ms="473" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:17 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:18 IST" duration-ms="861" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,26 +72,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:52 IST" name="driverQuit" finished-at="2025-09-12T09:37:52 IST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:18 IST" name="driverQuit" finished-at="2025-09-15T13:38:18 IST" duration-ms="667" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserInitializer()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:52 IST" name="browserInitializer" finished-at="2025-09-12T09:37:53 IST" duration-ms="1324" status="PASS">
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:18 IST" name="browserInitializer" finished-at="2025-09-15T13:38:22 IST" duration-ms="3393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitializer -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:52 IST" name="quitAndClose" finished-at="2025-09-12T09:37:52 IST" duration-ms="0" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:22 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:23 IST" duration-ms="938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitAndClose -->
-        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:53 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-12T09:37:54 IST" duration-ms="472" status="PASS">
+        </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@7486b455]" started-at="2025-09-15T13:38:23 IST" name="driverQuit" finished-at="2025-09-15T13:38:23 IST" duration-ms="313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@7486b455] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscript.LoginTest -->
+    </test> <!-- Test -->
+    <test started-at="2025-09-15T13:38:11 IST" name="FirefoxTest" finished-at="2025-09-15T13:38:40 IST" duration-ms="29303">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:11 IST" name="browserInitializer" finished-at="2025-09-15T13:38:21 IST" duration-ms="10568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:21 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:22 IST" duration-ms="1157" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,22 +152,94 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:54 IST" name="driverQuit" finished-at="2025-09-12T09:37:54 IST" duration-ms="175" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:22 IST" name="driverQuit" finished-at="2025-09-15T13:38:24 IST" duration-ms="1956" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1e4f4a5c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="quitAndClose()[pri:0, instance:testscript.LoginTest@1e4f4a5c]" started-at="2025-09-12T09:37:54 IST" name="quitAndClose" finished-at="2025-09-12T09:37:54 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:24 IST" name="browserInitializer" finished-at="2025-09-15T13:38:30 IST" duration-ms="5637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitAndClose -->
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:30 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:31 IST" duration-ms="628" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:31 IST" name="driverQuit" finished-at="2025-09-15T13:38:32 IST" duration-ms="1404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+        <test-method is-config="true" signature="browserInitializer(java.lang.String)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:32 IST" name="browserInitializer" finished-at="2025-09-15T13:38:38 IST" duration-ms="5852" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitializer -->
+        <test-method signature="verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:38 IST" name="verifyLoginWithInvalidUsernameInvalidpassword" description="Login With Invalid Username Invalid Password" data-provider="loginProvider" finished-at="2025-09-15T13:38:38 IST" duration-ms="670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidUsernameInvalidpassword -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@1ebea008]" started-at="2025-09-15T13:38:38 IST" name="driverQuit" finished-at="2025-09-15T13:38:40 IST" duration-ms="1362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsernameInvalidpassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsernameInvalidpassword(java.lang.String,java.lang.String)[pri:4, instance:testscript.LoginTest@1ebea008] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
       </class> <!-- testscript.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- parallel -->
 </testng-results>
