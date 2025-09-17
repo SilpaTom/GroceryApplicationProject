@@ -4,11 +4,11 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Pages.LoginPage;
-import Pages.ManageNewsPage;
 import base.TestNGBase;
 import constant.Constants;
 import constant.Messages;
+import pages.LoginPage;
+import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
