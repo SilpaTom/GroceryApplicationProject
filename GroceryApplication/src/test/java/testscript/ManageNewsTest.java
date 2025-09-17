@@ -1,9 +1,7 @@
 package testscript;
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import base.TestNGBase;
 import constant.Constants;
 import constant.Messages;
@@ -14,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
 	HomePage homepage;
-
+	ManageNewsPage mangenewspage;
 	
 	@Test(description = "verify Add News")
 	
@@ -23,13 +21,12 @@ public class ManageNewsTest extends TestNGBase{
 		 String passwordValue=ExcelUtility.getStringData(1, 1,  Constants.LOGINSHEET);		
 		 LoginPage loginpage=new LoginPage(driver);
 		 loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
-		 homepage=loginpage.clickOnSignin();
-		 ManageNewsPage mangenewspage=new ManageNewsPage(driver);
+		 homepage=loginpage.clickOnSignin();		
 		 mangenewspage=homepage.clickManageNewsTile();
 		 mangenewspage.clickNewButton().clickAddNewsInput().clickAddNewsSavebtn();
 		 boolean isadduseralertdisplayed = mangenewspage.isaddNewsAlertDisplayed();
 		 Assert.assertTrue(isadduseralertdisplayed,Messages.ADDUSERALERTDISPLAYEDERROR);
-		 
+	
 	}
 	
 	@Test(description = "verify Home Button")
@@ -39,7 +36,6 @@ public class ManageNewsTest extends TestNGBase{
 		 LoginPage loginpage=new LoginPage(driver);
 		 loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		 homepage= loginpage.clickOnSignin();
-		 ManageNewsPage mangenewspage=new ManageNewsPage(driver);
 		 mangenewspage= homepage.clickManageNewsTile();
 		 homepage= mangenewspage.clickhomebtn();	
 		 String actual=driver.getCurrentUrl();
@@ -55,7 +51,6 @@ public class ManageNewsTest extends TestNGBase{
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignin();
-		ManageNewsPage mangenewspage=new ManageNewsPage(driver);
 		mangenewspage=homepage.clickManageNewsTile();
 		mangenewspage.clickSearchButton().enterNewsTitlteInputBox().clickSearchbtnInSeach();
 		String actualnewssearched=mangenewspage.isSearchedNewsListedIntable();
@@ -71,7 +66,6 @@ public class ManageNewsTest extends TestNGBase{
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
 		homepage=loginpage.clickOnSignin();
-		ManageNewsPage mangenewspage=new ManageNewsPage(driver);
 		mangenewspage=homepage.clickManageNewsTile();
 		mangenewspage.clickSearchButton().enterNewsTitlteInputBox().clickResetInSearch();
 		boolean issearchandmangenewscarddispalyed=mangenewspage.isSearchAndMangeNewsCarddisplayed();
