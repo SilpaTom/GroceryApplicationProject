@@ -34,5 +34,12 @@ public class HomePage {
 		pageutility.clickElement(adminmoreinfo);
 		return new AdminPage(driver);
 	   }
+	//to click on the manage news tile   
+	   @FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and @class='small-box-footer']")WebElement managenewstile;
+	   public ManageNewsPage clickManageNewsTile() {
+			pageutility.clickElement(managenewstile);
+			return new ManageNewsPage(driver) ;
+	   }
+	   
 	   
 }

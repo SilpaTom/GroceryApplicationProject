@@ -26,10 +26,9 @@ public class AdminTest extends TestNGBase{
 		String randomname=fakerUtility.createRandomUserName();
 		String randompassword=fakerUtility.createRandomPassword();
 		String userType=ExcelUtility.getStringData(1, 2,Constants.HOMESHEET);
-		adminpage.clickNewButton().enterUsername(randomname).enterUsername(randomname).enterPassword(randompassword).selectUserTypedropdwon(userType).clickSaveButton();
+		adminpage.clickNewButton().enterUsername(randomname).enterPassword(randompassword).selectUserTypedropdwon(userType).clickSaveButton();
 		boolean isDisplayed=adminpage.isAlertDisplayed();
 		Assert.assertTrue(isDisplayed,Messages.USERNOTADDEDERROR);
-	    
-	}
+		}
 
 }

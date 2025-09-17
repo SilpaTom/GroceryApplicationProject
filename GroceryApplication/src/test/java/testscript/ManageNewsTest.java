@@ -7,11 +7,14 @@ import org.testng.annotations.Test;
 import base.TestNGBase;
 import constant.Constants;
 import constant.Messages;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase{
+	HomePage homepage;
+
 	
 	@Test(description = "verify Add News")
 	
@@ -19,16 +22,13 @@ public class ManageNewsTest extends TestNGBase{
 		 String usernameValue=ExcelUtility.getStringData(1, 0,  Constants.LOGINSHEET);
 		 String passwordValue=ExcelUtility.getStringData(1, 1,  Constants.LOGINSHEET);		
 		 LoginPage loginpage=new LoginPage(driver);
-		 loginpage.enterUserName(usernameValue);
-		 loginpage.enterPassword(passwordValue);
-		 loginpage.clickOnSignin();
+		 loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
+		 homepage=loginpage.clickOnSignin();
 		 ManageNewsPage mangenewspage=new ManageNewsPage(driver);
-		 mangenewspage.clickManageNewsTile();
-		 mangenewspage.clickNewButton();
-		 mangenewspage.enterEditNewsInput();
-		 mangenewspage.enterEditNewsSavebtn();
-		boolean isadduseralertdisplayed = mangenewspage.isaddNewsAlertDisplayed();
-		Assert.assertTrue(isadduseralertdisplayed,Messages.ADDUSERALERTDISPLAYEDERROR);
+		 mangenewspage=homepage.clickManageNewsTile();
+		 mangenewspage.clickNewButton().clickAddNewsInput().clickAddNewsSavebtn();
+		 boolean isadduseralertdisplayed = mangenewspage.isaddNewsAlertDisplayed();
+		 Assert.assertTrue(isadduseralertdisplayed,Messages.ADDUSERALERTDISPLAYEDERROR);
 		 
 	}
 	
@@ -37,34 +37,30 @@ public class ManageNewsTest extends TestNGBase{
 		 String usernameValue=ExcelUtility.getStringData(1, 0,  Constants.LOGINSHEET);
 		 String passwordValue=ExcelUtility.getStringData(1, 1,  Constants.LOGINSHEET);		
 		 LoginPage loginpage=new LoginPage(driver);
-		 loginpage.enterUserName(usernameValue);
-		 loginpage.enterPassword(passwordValue);
-		 loginpage.clickOnSignin();
+		 loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
+		 homepage= loginpage.clickOnSignin();
 		 ManageNewsPage mangenewspage=new ManageNewsPage(driver);
-		 mangenewspage.clickManageNewsTile();
-		 mangenewspage.clickhomebtn();	
+		 mangenewspage= homepage.clickManageNewsTile();
+		 homepage= mangenewspage.clickhomebtn();	
 		 String actual=driver.getCurrentUrl();
 		 String expected="https://groceryapp.uniqassosiates.com/admin/home";
 		 Assert.assertEquals(actual, expected,Messages.NAVIGATETOHOMEPAGEERROR);
 	}
 	
 	@Test(description = "Verify Search button in Search()")
-	public void verifySearchAndSearch() throws IOException {
+	public void verifySearchAndSearch() throws IOException
+	  {
 		String usernameValue=ExcelUtility.getStringData(1, 0,  Constants.LOGINSHEET);
 		String passwordValue=ExcelUtility.getStringData(1, 1,  Constants.LOGINSHEET);	
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUserName(usernameValue);
-		loginpage.enterPassword(passwordValue);
-		loginpage.clickOnSignin();
+		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
+		homepage=loginpage.clickOnSignin();
 		ManageNewsPage mangenewspage=new ManageNewsPage(driver);
-		mangenewspage.clickManageNewsTile();
-		mangenewspage.clickSearchButton();
-		mangenewspage.enterNewsTitlteInputBox();
-		mangenewspage.clickSearchbtnInSeach();
+		mangenewspage=homepage.clickManageNewsTile();
+		mangenewspage.clickSearchButton().enterNewsTitlteInputBox().clickSearchbtnInSeach();
 		String actualnewssearched=mangenewspage.isSearchedNewsListedIntable();
 		String expectednews="sample news";
 		Assert.assertEquals(actualnewssearched,expectednews,Messages.SEARCHEDNEWSNOTFOUNDERROR);
-		
 		}
 	
 	@Test(description= "Verify Reset button in Search")
@@ -73,14 +69,11 @@ public class ManageNewsTest extends TestNGBase{
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
 		String passwordValue=ExcelUtility.getStringData(1, 1,  Constants.LOGINSHEET);		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUserName(usernameValue);
-		loginpage.enterPassword(passwordValue);
-		loginpage.clickOnSignin();
+		loginpage.enterUserName(usernameValue).enterPassword(passwordValue);
+		homepage=loginpage.clickOnSignin();
 		ManageNewsPage mangenewspage=new ManageNewsPage(driver);
-		mangenewspage.clickManageNewsTile();
-		mangenewspage.clickSearchButton();
-		mangenewspage.enterNewsTitlteInputBox();
-		mangenewspage.clickResetInSearch();
+		mangenewspage=homepage.clickManageNewsTile();
+		mangenewspage.clickSearchButton().enterNewsTitlteInputBox().clickResetInSearch();
 		boolean issearchandmangenewscarddispalyed=mangenewspage.isSearchAndMangeNewsCarddisplayed();
 		Assert.assertFalse(issearchandmangenewscarddispalyed,Messages.RESETERROR);
 	}
