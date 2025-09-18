@@ -6,12 +6,11 @@ import org.testng.annotations.Test;
 import base.TestNGBase;
 import constant.Constants;
 import constant.Messages;
-import pages.HomePage;
+import pages.HomePage; 
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends TestNGBase {
-	
 	// retry is applied here as this is a flaky test case
     HomePage homepage; // object declaration, space wont create here
 	@Test(priority = 1, description = "login with valid credentials",retryAnalyzer = retry.Retry.class)
